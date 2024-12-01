@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.1">
+  <diagram name="Page-1" id="YDoVRBxFZmCFP5W51xK6">
+    <mxGraphModel dx="794" dy="412" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="hRBYWftRV1o1iDACb-mI-1" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;Inventory Service&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="20" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hRBYWftRV1o1iDACb-mI-2" value="Logistics" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="130" width="370" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="hRBYWftRV1o1iDACb-mI-3" value="&lt;div style=&quot;line-height: 210%;&quot;&gt;&lt;div&gt;&lt;div&gt;ID : String&lt;/div&gt;&lt;div&gt;Name : String&lt;/div&gt;&lt;div&gt;Code Name : String&lt;/div&gt;&lt;div&gt;Point of Contact Name : String&lt;/div&gt;&lt;div&gt;Point of Contact Phone Number : String&lt;/div&gt;&lt;div&gt;Point of Contact Email : String&lt;/div&gt;&lt;div&gt;Is Active : Boolean&lt;/div&gt;&lt;div&gt;Creation Date : ZonedDateTime&lt;/div&gt;&lt;div&gt;Last Modified Date : ZonedDateTime&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="hRBYWftRV1o1iDACb-mI-2">
+          <mxGeometry y="30" width="370" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="hRBYWftRV1o1iDACb-mI-4" value="Pincodes" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="130" width="370" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="hRBYWftRV1o1iDACb-mI-5" value="&lt;div style=&quot;line-height: 210%;&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;ID : String&lt;/div&gt;&lt;div&gt;Pincode Number : String&lt;/div&gt;&lt;div&gt;Latitude : String&lt;/div&gt;&lt;div&gt;Longitude : String&lt;/div&gt;&lt;div&gt;District : String&lt;/div&gt;&lt;div&gt;State ID : String&lt;/div&gt;&lt;div&gt;Is Served : Boolean&lt;/div&gt;&lt;div&gt;Creation Date : ZonedDateTime&lt;/div&gt;&lt;div&gt;Last Modified Date : ZonedDateTime&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="hRBYWftRV1o1iDACb-mI-4">
+          <mxGeometry y="30" width="370" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="hRBYWftRV1o1iDACb-mI-6" value="States" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="430" width="370" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="hRBYWftRV1o1iDACb-mI-7" value="&lt;div style=&quot;line-height: 210%;&quot;&gt;&lt;div&gt;ID : String&lt;/div&gt;&lt;div&gt;Name : String&lt;/div&gt;&lt;div&gt;First Warehouse Number : String&lt;/div&gt;&lt;div&gt;Second Warehouse Number : String&lt;/div&gt;&lt;div&gt;Third Warehouse Number : String&lt;/div&gt;&lt;div&gt;Creation Date : ZonedDateTime&lt;/div&gt;&lt;div&gt;Last Modified Date : ZonedDateTime&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="hRBYWftRV1o1iDACb-mI-6">
+          <mxGeometry y="30" width="370" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="hRBYWftRV1o1iDACb-mI-8" value="Stocks" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="430" width="370" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="hRBYWftRV1o1iDACb-mI-9" value="&lt;div style=&quot;line-height: 210%;&quot;&gt;&lt;div&gt;ID : String&lt;/div&gt;&lt;div&gt;Name : String&lt;/div&gt;&lt;div&gt;Warehouse Number : String&lt;/div&gt;&lt;div&gt;SKU : String&lt;/div&gt;&lt;div&gt;Stock Count : Double&lt;/div&gt;&lt;div&gt;Creation Date : ZonedDateTime&lt;/div&gt;&lt;div&gt;Last Modified Date : ZonedDateTime&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="hRBYWftRV1o1iDACb-mI-8">
+          <mxGeometry y="30" width="370" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="hRBYWftRV1o1iDACb-mI-10" value="Stock Movements" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="680" width="370" height="410" as="geometry" />
+        </mxCell>
+        <mxCell id="hRBYWftRV1o1iDACb-mI-11" value="&lt;div style=&quot;line-height: 210%;&quot;&gt;&lt;div&gt;ID : String&lt;/div&gt;&lt;div&gt;Warehouse Number : String&lt;/div&gt;&lt;div&gt;SKU and Stock : String&lt;/div&gt;&lt;div&gt;Transaction Date : ZonedDateTime&lt;/div&gt;&lt;div&gt;Completion Date : ZonedDateTime&lt;/div&gt;&lt;div&gt;Received By Employee Number : String&lt;/div&gt;&lt;div&gt;Movement Type : Enum (Stock Movement Type Enum)&lt;/div&gt;&lt;div&gt;Reason : Enum (Stock Movement Reason Enum)&lt;/div&gt;&lt;div&gt;Consignment Number : String&lt;/div&gt;&lt;div&gt;Logistics Code Name : String&lt;/div&gt;&lt;div&gt;Logistics Deliverer Name : String&lt;/div&gt;&lt;div&gt;Logistics Deliverer Number : String&lt;/div&gt;&lt;div&gt;Is Consumed : Boolean&lt;/div&gt;&lt;div&gt;Status : Enum (Stock Movement Status)&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="hRBYWftRV1o1iDACb-mI-10">
+          <mxGeometry y="30" width="370" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="hRBYWftRV1o1iDACb-mI-12" value="Warehouses" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="680" width="370" height="510" as="geometry" />
+        </mxCell>
+        <mxCell id="hRBYWftRV1o1iDACb-mI-13" value="&lt;div style=&quot;line-height: 210%;&quot;&gt;&lt;div&gt;ID : String&lt;/div&gt;&lt;div&gt;Name : String&lt;/div&gt;&lt;div&gt;Warehouse Number : String&lt;/div&gt;&lt;div&gt;Is Active : Boolean&lt;/div&gt;&lt;div&gt;Pin Code : String&lt;/div&gt;&lt;div&gt;Address : String&lt;/div&gt;&lt;div&gt;Latitude : String&lt;/div&gt;&lt;div&gt;Longitude : String&lt;/div&gt;&lt;div&gt;District : String&lt;/div&gt;&lt;div&gt;State ID : String&lt;/div&gt;&lt;div&gt;Official Phone Number : String&lt;/div&gt;&lt;div&gt;Official Email ID : String&lt;/div&gt;&lt;div&gt;Point of Contact Name : String&lt;/div&gt;&lt;div&gt;Point of Contact Phone Number : String&lt;/div&gt;&lt;div&gt;Second POC : String&lt;/div&gt;&lt;div&gt;Second POC Number : String&lt;/div&gt;&lt;div&gt;Creation Date : ZonedDateTime&lt;/div&gt;&lt;div&gt;Last Modified Date : ZonedDateTime&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="hRBYWftRV1o1iDACb-mI-12">
+          <mxGeometry y="30" width="370" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="hRBYWftRV1o1iDACb-mI-14" value="Stock Movement Reason Enum" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1110" width="230" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="hRBYWftRV1o1iDACb-mI-15" value="&lt;div style=&quot;line-height: 200%;&quot;&gt;&lt;div style=&quot;line-height: 200%;&quot;&gt;FRESH_STOCK&lt;/div&gt;&lt;div style=&quot;line-height: 200%;&quot;&gt;STOCK_TRANSFER&lt;/div&gt;&lt;div style=&quot;line-height: 200%;&quot;&gt;DELIVERY_FULFILLMENT&lt;/div&gt;&lt;div style=&quot;line-height: 200%;&quot;&gt;RETURN_FULFILLMENT&lt;/div&gt;&lt;div style=&quot;line-height: 200%;&quot;&gt;WASTAGE&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="hRBYWftRV1o1iDACb-mI-14">
+          <mxGeometry y="30" width="230" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="hRBYWftRV1o1iDACb-mI-16" value="Stock Movement Status" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1300" width="230" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="hRBYWftRV1o1iDACb-mI-17" value="&lt;div style=&quot;line-height: 200%;&quot;&gt;&lt;div style=&quot;line-height: 200%;&quot;&gt;&lt;div style=&quot;line-height: 200%;&quot;&gt;INITIATED&lt;/div&gt;&lt;div style=&quot;line-height: 200%;&quot;&gt;IN_PROGRESS&lt;/div&gt;&lt;div style=&quot;line-height: 200%;&quot;&gt;COMPLETED&lt;/div&gt;&lt;div style=&quot;line-height: 200%;&quot;&gt;CANCELLED&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="hRBYWftRV1o1iDACb-mI-16">
+          <mxGeometry y="30" width="230" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="hRBYWftRV1o1iDACb-mI-18" value="Stock Movement Type Enum" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="1210" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="hRBYWftRV1o1iDACb-mI-19" value="&lt;div style=&quot;line-height: 200%;&quot;&gt;&lt;div style=&quot;line-height: 200%;&quot;&gt;UP&lt;/div&gt;&lt;div style=&quot;line-height: 200%;&quot;&gt;DOWN&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="hRBYWftRV1o1iDACb-mI-18">
+          <mxGeometry y="30" width="230" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
