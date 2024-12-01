@@ -1,0 +1,4965 @@
+{
+	"info": {
+		"_postman_id": "4f61a622-874d-4682-a4ff-d7a83e9f68bf",
+		"name": "Inventory & Order Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18403833"
+	},
+	"item": [
+		{
+			"name": "API Gateway Service",
+			"item": [
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"password\": \"password123\",\r\n  \"employeeNumber\": \"0253253\",\r\n  \"name\": \"John Nish\",\r\n  \"roleName\": \"Data Analyst\",\r\n  \"departmentName\": \"Human Resources\",\r\n  \"phone\": \"9876543210\",\r\n  \"secondaryPhone\": \"9988776655\",\r\n  \"personalEmail\": \"nishalb7599@gmail.com\",\r\n  \"officialEmail\": \"nishalb7599@gmail.com\",\r\n  \"officialPhoneNumber\": \"022-12345678\",\r\n  \"isActive\": true,\r\n  \"address\": \"123, Main Street, City, Country\",\r\n  \"pincode\": \"560050\",\r\n  \"warehouseNumber\": \"WH001\",\r\n  \"joiningDate\": \"2024-11-30T00:00:00Z\",\r\n  \"salary\": 75000.00,\r\n  \"reporterName\": \"Alice Smith\",\r\n  \"reporterEmployeeNumber\": \"0253252\",\r\n  \"isPresentlyWorkingInThisCompany\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"password\": \"password123\",\r\n  \"employeeNumber\": \"0253253\",\r\n  \"name\": \"John Nish\",\r\n  \"roleName\": \"Data Analyst\",\r\n  \"departmentName\": \"Human Resources\",\r\n  \"phone\": \"9876543210\",\r\n  \"secondaryPhone\": \"9988776655\",\r\n  \"personalEmail\": \"nishalb7599@gmail.com\",\r\n  \"officialEmail\": \"nishalb7599@gmail.com\",\r\n  \"officialPhoneNumber\": \"022-12345678\",\r\n  \"isActive\": true,\r\n  \"address\": \"123, Main Street, City, Country\",\r\n  \"pincode\": \"560050\",\r\n  \"warehouseNumber\": \"WH001\",\r\n  \"joiningDate\": \"2024-11-30T00:00:00Z\",\r\n  \"salary\": 75000.00,\r\n  \"reporterName\": \"Alice Smith\",\r\n  \"reporterEmployeeNumber\": \"0253252\",\r\n  \"isPresentlyWorkingInThisCompany\": true\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8088/auth/signup",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "107"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Nov 2024 19:32:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": null,\n    \"email\": null,\n    \"password\": null,\n    \"phone\": null,\n    \"message\": \"EMPLOYEE CREATED SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Verify OTP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"nishalb7599@gmail.com\",\r\n  \"otp\": 161814\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/auth/verifyOTP",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"auth",
+								"verifyOTP"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"nishalb7599@gmail.com\",\r\n  \"otp\": 161814\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8088/auth/verifyOTP",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"auth",
+										"verifyOTP"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Nov 2024 19:48:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "true"
+						}
+					]
+				},
+				{
+					"name": "Resend OTP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/auth/resendEmail?email=nishalb7599@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"auth",
+								"resendEmail"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "nishalb7599@gmail.com"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8088/auth/resendEmail?email=nishalb7599@gmail.com",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"auth",
+										"resendEmail"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "nishalb7599@gmail.com"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Nov 2024 22:07:28 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "true"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"nishalb7599@gmail.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"nishalb7599@gmail.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8088/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "187"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Nov 2024 19:48:27 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuaXNoYWxiNzU5OUBnbWFpbC5jb20iLCJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTczMjk5NjEwNywiZXhwIjoxNzM2NTk2MTA3fQ.JuscNbHYNDOWlcRCcKfN510dIu1Ho5p4xY7-s3DMsIo\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Transaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuaXNoYWxiNzU5OUBnbWFpbC5jb20iLCJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTczMjk5NjEwNywiZXhwIjoxNzM2NTk2MTA3fQ.JuscNbHYNDOWlcRCcKfN510dIu1Ho5p4xY7-s3DMsIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"consignmentNumber\": \"0000000002_001\",\r\n  \"orderNumber\": \"0000000002\",\r\n  \"previousStatus\": \"OUT_FOR_DELIVERY\",\r\n  \"logisticsCodeName\": \"XYZ_Logistics\",\r\n  \"logisticsTrackingId\": \"XYZ123456789\",\r\n  \"presentStatus\": \"OUT_FOR_DELIVERY\",\r\n  \"statusLog\": \"Consignment is out for delivery man\",\r\n  \"fulfillmentType\": \"DELIVERY\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/consignment/createTransaction",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"consignment",
+								"createTransaction"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"consignmentNumber\": \"0000000002_001\",\r\n  \"orderNumber\": \"0000000002\",\r\n  \"previousStatus\": \"OUT_FOR_DELIVERY\",\r\n  \"logisticsCodeName\": \"XYZ_Logistics\",\r\n  \"logisticsTrackingId\": \"XYZ123456789\",\r\n  \"presentStatus\": \"OUT_FOR_DELIVERY\",\r\n  \"statusLog\": \"Consignment is out for delivery man\",\r\n  \"fulfillmentType\": \"DELIVERY\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8088/consignment/createTransaction",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"consignment",
+										"createTransaction"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 30 Nov 2024 22:13:55 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"TRANSACTION_CREATED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Stock Movement",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuaXNoYWxiNzU5OUBnbWFpbC5jb20iLCJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTczMjk5NjEwNywiZXhwIjoxNzM2NTk2MTA3fQ.JuscNbHYNDOWlcRCcKfN510dIu1Ho5p4xY7-s3DMsIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"warehouseNumber\": \"WH003\",\r\n  \"skuAndStock\": \"334455_250;667788_400;112233_500\",\r\n  \"receivedByEmployeeNumber\": \"EMP9876\",\r\n  \"movementType\": \"UP\",\r\n  \"reason\": \"STOCK_TRANSFER\",\r\n  //\"consignmentNumber\": \"CN56789\",\r\n  //\"logisticsCodeName\": \"ABC Logistics\",\r\n  //\"logisticsDelivererName\": \"John Doe\",\r\n  //\"logisticsDelivererNumber\": \"LD12345\",\r\n  \"isConsumed\": false,\r\n  \"status\": \"COMPLETED\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/inventory/createStockMovement",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"inventory",
+								"createStockMovement"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"warehouseNumber\": \"WH003\",\r\n  \"skuAndStock\": \"334455_250;667788_400;112233_500\",\r\n  \"receivedByEmployeeNumber\": \"EMP9876\",\r\n  \"movementType\": \"UP\",\r\n  \"reason\": \"STOCK_TRANSFER\",\r\n  //\"consignmentNumber\": \"CN56789\",\r\n  //\"logisticsCodeName\": \"ABC Logistics\",\r\n  //\"logisticsDelivererName\": \"John Doe\",\r\n  //\"logisticsDelivererNumber\": \"LD12345\",\r\n  \"isConsumed\": false,\r\n  \"status\": \"COMPLETED\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8088/inventory/createStockMovement",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"inventory",
+										"createStockMovement"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 30 Nov 2024 22:14:19 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"SKM17330048599440000000021\",\n    \"warehouseNumber\": \"WH003\",\n    \"skuAndStock\": \"334455_250;667788_400;112233_500\",\n    \"transactionDate\": null,\n    \"completionDate\": null,\n    \"receivedByEmployeeNumber\": \"EMP9876\",\n    \"movementType\": \"UP\",\n    \"reason\": \"STOCK_TRANSFER\",\n    \"consignmentNumber\": null,\n    \"logisticsCodeName\": null,\n    \"logisticsDelivererName\": null,\n    \"logisticsDelivererNumber\": null,\n    \"isConsumed\": false,\n    \"status\": \"COMPLETED\",\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"STOCK_MOVEMENT_CREATED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuaXNoYWxiNzU5OUBnbWFpbC5jb20iLCJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTczMjk5NjEwNywiZXhwIjoxNzM2NTk2MTA3fQ.JuscNbHYNDOWlcRCcKfN510dIu1Ho5p4xY7-s3DMsIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"grandTotal\": 1200.00,\r\n  \"tax\": 100.00,\r\n  \"discount\": 50.00,\r\n  \"shippingFee\": 20.00,\r\n  \"payableTotal\": 1270.00,\r\n  \"billingAddress\": \"123 Main St, City, Country\",\r\n  \"shippingAddress\": \"456 Side St, City, Country\",\r\n  \"shippingPincode\": \"894542\",\r\n  \"customerEmail\": \"nishalb7599@gmail.com\",\r\n  \"customerPhone\": \"4534564453\",\r\n  \"customerName\": \"John Doe\",\r\n  \"orderItems\": [\r\n    {\r\n      \"productId\": \"prod123\",\r\n      \"sku\": \"445566\",\r\n      \"unitPrice\": 500.00,\r\n      \"salesPrice\": 450.00,\r\n      \"discount\": 20.00,\r\n      \"shippingFee\": 5.00,\r\n      \"tax\": 25.00,\r\n      \"quantity\": 36,\r\n      \"totalPrice\": 1000.00,\r\n      \"totalSalesPrice\": 900.00\r\n    },\r\n    {\r\n      \"productId\": \"prod123\",\r\n      \"sku\": \"556677\",\r\n      \"unitPrice\": 500.00,\r\n      \"salesPrice\": 450.00,\r\n      \"discount\": 20.00,\r\n      \"shippingFee\": 5.00,\r\n      \"tax\": 25.00,\r\n      \"quantity\": 10,\r\n      \"totalPrice\": 1000.00,\r\n      \"totalSalesPrice\": 900.00\r\n    },\r\n    {\r\n      \"productId\": \"prod123\",\r\n      \"sku\": \"667788\",\r\n      \"unitPrice\": 500.00,\r\n      \"salesPrice\": 450.00,\r\n      \"discount\": 20.00,\r\n      \"shippingFee\": 5.00,\r\n      \"tax\": 25.00,\r\n      \"quantity\": 10,\r\n      \"totalPrice\": 1000.00,\r\n      \"totalSalesPrice\": 900.00\r\n    },\r\n\t{\r\n      \"productId\": \"prod123\",\r\n      \"sku\": \"112233\",\r\n      \"unitPrice\": 500.00,\r\n      \"salesPrice\": 450.00,\r\n      \"discount\": 20.00,\r\n      \"shippingFee\": 5.00,\r\n      \"tax\": 25.00,\r\n      \"quantity\": 4,\r\n      \"totalPrice\": 1000.00,\r\n      \"totalSalesPrice\": 900.00\r\n    }\r\n  ],\r\n  \"isEmailTriggerNeeded\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/order/createOrder",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"order",
+								"createOrder"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"grandTotal\": 1200.00,\r\n  \"tax\": 100.00,\r\n  \"discount\": 50.00,\r\n  \"shippingFee\": 20.00,\r\n  \"payableTotal\": 1270.00,\r\n  \"billingAddress\": \"123 Main St, City, Country\",\r\n  \"shippingAddress\": \"456 Side St, City, Country\",\r\n  \"shippingPincode\": \"894542\",\r\n  \"customerEmail\": \"nishalb7599@gmail.com\",\r\n  \"customerPhone\": \"4534564453\",\r\n  \"customerName\": \"John Doe\",\r\n  \"orderItems\": [\r\n    {\r\n      \"productId\": \"prod123\",\r\n      \"sku\": \"445566\",\r\n      \"unitPrice\": 500.00,\r\n      \"salesPrice\": 450.00,\r\n      \"discount\": 20.00,\r\n      \"shippingFee\": 5.00,\r\n      \"tax\": 25.00,\r\n      \"quantity\": 36,\r\n      \"totalPrice\": 1000.00,\r\n      \"totalSalesPrice\": 900.00\r\n    },\r\n    {\r\n      \"productId\": \"prod123\",\r\n      \"sku\": \"556677\",\r\n      \"unitPrice\": 500.00,\r\n      \"salesPrice\": 450.00,\r\n      \"discount\": 20.00,\r\n      \"shippingFee\": 5.00,\r\n      \"tax\": 25.00,\r\n      \"quantity\": 10,\r\n      \"totalPrice\": 1000.00,\r\n      \"totalSalesPrice\": 900.00\r\n    },\r\n    {\r\n      \"productId\": \"prod123\",\r\n      \"sku\": \"667788\",\r\n      \"unitPrice\": 500.00,\r\n      \"salesPrice\": 450.00,\r\n      \"discount\": 20.00,\r\n      \"shippingFee\": 5.00,\r\n      \"tax\": 25.00,\r\n      \"quantity\": 10,\r\n      \"totalPrice\": 1000.00,\r\n      \"totalSalesPrice\": 900.00\r\n    },\r\n\t{\r\n      \"productId\": \"prod123\",\r\n      \"sku\": \"112233\",\r\n      \"unitPrice\": 500.00,\r\n      \"salesPrice\": 450.00,\r\n      \"discount\": 20.00,\r\n      \"shippingFee\": 5.00,\r\n      \"tax\": 25.00,\r\n      \"quantity\": 4,\r\n      \"totalPrice\": 1000.00,\r\n      \"totalSalesPrice\": 900.00\r\n    }\r\n  ],\r\n  \"isEmailTriggerNeeded\": true\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8088/order/createOrder",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"order",
+										"createOrder"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 30 Nov 2024 21:53:36 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"DRAFT_ORDER_CREATED_SUCCESSFULLLY\",\n    \"rejectedSKUs\": null,\n    \"orderNumber\": \"0000000008\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Order Placed",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuaXNoYWxiNzU5OUBnbWFpbC5jb20iLCJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTczMjk5NjEwNywiZXhwIjoxNzM2NTk2MTA3fQ.JuscNbHYNDOWlcRCcKfN510dIu1Ho5p4xY7-s3DMsIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"orderNumber\": \"0000000008\",\r\n  \"billingAddress\": \"123 Main St, City, Country\",\r\n  \"shippingAddress\": \"456 Side St, City, Country\",\r\n  \"shippingPincode\": \"894542\",\r\n  \"customerEmail\": \"nishalb7599@gmail.com\",\r\n  \"customerPhone\": \"3354675644\",\r\n  \"customerName\": \"John Doe\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/order/orderPlaced",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"order",
+								"orderPlaced"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"orderNumber\": \"0000000008\",\r\n  \"billingAddress\": \"123 Main St, City, Country\",\r\n  \"shippingAddress\": \"456 Side St, City, Country\",\r\n  \"shippingPincode\": \"894542\",\r\n  \"customerEmail\": \"nishalb7599@gmail.com\",\r\n  \"customerPhone\": \"3354675644\",\r\n  \"customerName\": \"John Doe\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8088/order/orderPlaced",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"order",
+										"orderPlaced"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 30 Nov 2024 21:53:42 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"ORDER_PLACED_SUCCESSFULLY\",\n    \"rejectedSKUs\": null,\n    \"orderNumber\": \"0000000008\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Cancel Order by Order Number",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuaXNoYWxiNzU5OUBnbWFpbC5jb20iLCJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTczMjk5NjEwNywiZXhwIjoxNzM2NTk2MTA3fQ.JuscNbHYNDOWlcRCcKfN510dIu1Ho5p4xY7-s3DMsIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/order/cancelOrderByOrderNumber?orderNumber=0000000006",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"order",
+								"cancelOrderByOrderNumber"
+							],
+							"query": [
+								{
+									"key": "orderNumber",
+									"value": "0000000006"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:8088/order/cancelOrderByOrderNumber?orderNumber=0000000006",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"order",
+										"cancelOrderByOrderNumber"
+									],
+									"query": [
+										{
+											"key": "orderNumber",
+											"value": "0000000006"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 30 Nov 2024 22:15:13 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"ORDER_CANCELLED_SUCCESSFULLY\",\n    \"rejectedSKUs\": null,\n    \"orderNumber\": \"0000000006\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Return Order Items",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuaXNoYWxiNzU5OUBnbWFpbC5jb20iLCJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTczMjk5NjEwNywiZXhwIjoxNzM2NTk2MTA3fQ.JuscNbHYNDOWlcRCcKfN510dIu1Ho5p4xY7-s3DMsIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"orderNumber\": \"0000000006\",\r\n  \"orderItems\": [\r\n    {\r\n      \"orderItemNumber\": \"0000000006.1\"\r\n    }/*,\r\n    {\r\n      \"orderItemNumber\": \"0000000001.4\"\r\n    }*/\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/order/returnOrderItems",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"order",
+								"returnOrderItems"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"orderNumber\": \"0000000006\",\r\n  \"orderItems\": [\r\n    {\r\n      \"orderItemNumber\": \"0000000006.1\"\r\n    }/*,\r\n    {\r\n      \"orderItemNumber\": \"0000000001.4\"\r\n    }*/\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8088/order/returnOrderItems",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"order",
+										"returnOrderItems"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 30 Nov 2024 22:15:41 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"RETURN_REQUEST_INITIATED_SUCCESSFULLY\",\n    \"rejectedSKUs\": null,\n    \"orderNumber\": \"0000000006\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Replace Order Items",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuaXNoYWxiNzU5OUBnbWFpbC5jb20iLCJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTczMjk5NjEwNywiZXhwIjoxNzM2NTk2MTA3fQ.JuscNbHYNDOWlcRCcKfN510dIu1Ho5p4xY7-s3DMsIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"orderNumber\": \"0000000005\",\r\n  \"orderItems\": [\r\n    {\r\n      \"orderItemNumber\": \"0000000005.1\"\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/order/replaceOrderItems",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"order",
+								"replaceOrderItems"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"orderNumber\": \"0000000005\",\r\n  \"orderItems\": [\r\n    {\r\n      \"orderItemNumber\": \"0000000005.1\"\r\n    }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8088/order/replaceOrderItems",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"order",
+										"replaceOrderItems"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 30 Nov 2024 22:16:08 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"REPLACEMENT_REQUEST_INITIATED_SUCCESSFULLY\",\n    \"rejectedSKUs\": null,\n    \"orderNumber\": \"0000000005\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Consignment Service",
+			"item": [
+				{
+					"name": "Create Consignments in Bulk",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"listOfConsignments\": [\r\n    {\r\n      \"orderNumber\": \"ORD10001\",\r\n      \"consignmentItems\": [\r\n        {\r\n          \"orderItemNumber\": \"ORDITEM1001\",\r\n          \"orderNumber\": \"ORD10001\",\r\n          \"warehouseNumber\": \"WH001\",\r\n          \"fulfillmentType\": \"DELIVERY\",\r\n          \"sku\": \"SKU123456\",\r\n          \"quantity\": 2\r\n        },\r\n        {\r\n          \"orderItemNumber\": \"ORDITEM1001\",\r\n          \"orderNumber\": \"ORD10001\",\r\n          \"warehouseNumber\": \"WH001\",\r\n          \"fulfillmentType\": \"DELIVERY\",\r\n          \"sku\": \"SKU123456\",\r\n          \"quantity\": 2\r\n        }\r\n      ],\r\n      \"warehouseNumber\": \"WH001\",\r\n      \"billingAddress\": \"123 Billing St, City, Country\",\r\n      \"shippingAddress\": \"456 Shipping Ave, City, Country\",\r\n      \"shippingPinCode\": \"400001\",\r\n      \"customerName\": \"John Doe\",\r\n      \"phone\": \"9876543210\",\r\n      \"email\": \"john.doe@company.com\",\r\n      \"fulfillmentType\": \"DELIVERY\"\r\n    },\r\n    {\r\n      \"orderNumber\": \"ORD10001\",\r\n      \"consignmentItems\": [\r\n        {\r\n          \"orderItemNumber\": \"ORDITEM1001\",\r\n          \"orderNumber\": \"ORD10001\",\r\n          \"warehouseNumber\": \"WH001\",\r\n          \"fulfillmentType\": \"DELIVERY\",\r\n          \"sku\": \"SKU123456\",\r\n          \"quantity\": 2\r\n        },\r\n        {\r\n          \"orderItemNumber\": \"ORDITEM1001\",\r\n          \"orderNumber\": \"ORD10001\",\r\n          \"warehouseNumber\": \"WH001\",\r\n          \"fulfillmentType\": \"DELIVERY\",\r\n          \"sku\": \"SKU123456\",\r\n          \"quantity\": 2\r\n        }\r\n      ],\r\n      \"warehouseNumber\": \"WH001\",\r\n      \"billingAddress\": \"123 Billing St, City, Country\",\r\n      \"shippingAddress\": \"456 Shipping Ave, City, Country\",\r\n      \"shippingPinCode\": \"400001\",\r\n      \"customerName\": \"John Doe\",\r\n      \"phone\": \"9876543210\",\r\n      \"email\": \"john.doe@company.com\",\r\n      \"fulfillmentType\": \"DELIVERY\"\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8086/consignment/createConsignmentsInBulk",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"consignment",
+								"createConsignmentsInBulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Consignments by Order Number",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8086/consignment/cancelConsignmentsByOrderNumber?orderNumber={}",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"consignment",
+								"cancelConsignmentsByOrderNumber"
+							],
+							"query": [
+								{
+									"key": "orderNumber",
+									"value": "{}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Consignment Items",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"listOfOrderItems\": [\r\n    {\r\n      \"orderItemNumber\": \"OI123456\"\r\n    },\r\n    {\r\n      \"orderItemNumber\": \"OI123456\"\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8086/consignment/cancelConsignmentItems",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"consignment",
+								"cancelConsignmentItems"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"consignmentNumber\": \"0000000002_001\",\r\n  \"orderNumber\": \"0000000002\",\r\n  \"previousStatus\": \"OUT_FOR_DELIVERY\",\r\n  \"logisticsCodeName\": \"XYZ_Logistics\",\r\n  \"logisticsTrackingId\": \"XYZ123456789\",\r\n  \"presentStatus\": \"OUT_FOR_DELIVERY\",\r\n  \"statusLog\": \"Consignment is out for delivery man\",\r\n  \"fulfillmentType\": \"DELIVERY\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8086/consignment/createTransaction",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"consignment",
+								"createTransaction"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"consignmentNumber\": \"0000000002_001\",\r\n  \"orderNumber\": \"0000000002\",\r\n  \"previousStatus\": \"OUT_FOR_DELIVERY\",\r\n  \"logisticsCodeName\": \"XYZ_Logistics\",\r\n  \"logisticsTrackingId\": \"XYZ123456789\",\r\n  \"presentStatus\": \"OUT_FOR_DELIVERY\",\r\n  \"statusLog\": \"Consignment is out for delivery man\",\r\n  \"fulfillmentType\": \"DELIVERY\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8086/consignment/createTransaction",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"consignment",
+										"createTransaction"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Nov 2024 19:14:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"TRANSACTION_CREATED_SUCCESSFULLY\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Inventory Service",
+			"item": [
+				{
+					"name": "Create Logistics",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Delhivery\",\r\n  \"codeName\": \"DLVR\",\r\n  \"pointOfContactName\": \"John Doe\",\r\n  \"pointOfContactPhoneNumber\": \"+1234567890\",\r\n  \"pointOfContactEmail\": \"johndoe@abclogistics.com\",\r\n  \"isActive\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/inventory/createLogistics",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"inventory",
+								"createLogistics"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Delhivery\",\r\n  \"codeName\": \"DLVR\",\r\n  \"pointOfContactName\": \"John Doe\",\r\n  \"pointOfContactPhoneNumber\": \"+1234567890\",\r\n  \"pointOfContactEmail\": \"johndoe@abclogistics.com\",\r\n  \"isActive\": true\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/inventory/createLogistics",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"inventory",
+										"createLogistics"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 18:13:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": \"Delhivery\",\n    \"codeName\": \"DLVR\",\n    \"pointOfContactName\": \"John Doe\",\n    \"pointOfContactPhoneNumber\": \"+1234567890\",\n    \"pointOfContactEmail\": \"johndoe@abclogistics.com\",\n    \"isActive\": true,\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"LOGISTICS_CREATED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Logistics",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"ABC Logisticsssss\",\r\n  \"codeName\": \"ABC123\",\r\n  \"pointOfContactName\": \"John Doe\",\r\n  \"pointOfContactPhoneNumber\": \"+1234567890\",\r\n  \"pointOfContactEmail\": \"johndoe@abclogistics.com\",\r\n  \"isActive\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/inventory/updateLogistics",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"inventory",
+								"updateLogistics"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"ABC Logisticsssss\",\r\n  \"codeName\": \"ABC123\",\r\n  \"pointOfContactName\": \"John Doe\",\r\n  \"pointOfContactPhoneNumber\": \"+1234567890\",\r\n  \"pointOfContactEmail\": \"johndoe@abclogistics.com\",\r\n  \"isActive\": true\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/inventory/updateLogistics",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"inventory",
+										"updateLogistics"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 18:13:40 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": \"ABC Logisticsssss\",\n    \"codeName\": \"ABC123\",\n    \"pointOfContactName\": \"John Doe\",\n    \"pointOfContactPhoneNumber\": \"+1234567890\",\n    \"pointOfContactEmail\": \"johndoe@abclogistics.com\",\n    \"isActive\": true,\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"LOGISTICS_UPDATED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Logistics by Codename",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/inventory/getLogisticsByCodeName?codeName=DLVR",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"inventory",
+								"getLogisticsByCodeName"
+							],
+							"query": [
+								{
+									"key": "codeName",
+									"value": "DLVR"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8083/inventory/getLogisticsByCodeName?codeName=DLVR",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"inventory",
+										"getLogisticsByCodeName"
+									],
+									"query": [
+										{
+											"key": "codeName",
+											"value": "DLVR"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 18:13:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"LOG17329040011880000000001\",\n    \"name\": \"Delhivery\",\n    \"codeName\": \"DLVR\",\n    \"pointOfContactName\": \"John Doe\",\n    \"pointOfContactPhoneNumber\": \"+1234567890\",\n    \"pointOfContactEmail\": \"johndoe@abclogistics.com\",\n    \"isActive\": true,\n    \"creationDate\": \"2024-11-29T23:43:21.164798+05:30\",\n    \"lastModifiedDate\": \"2024-11-29T23:43:21.164798+05:30\",\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"LOGISTICS_FETCHED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Pincodes in Bulk",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"listOfPincodes\": [\r\n    {\r\n      \"pincodeNumber\": \"560085\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504300000000001\",\r\n      \"isServed\": true\r\n    },\r\n    {\r\n      \"pincodeNumber\": \"577432\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504300000000001\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"101001\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000002\",\r\n      \"isServed\": true\r\n    },\r\n    {\r\n      \"pincodeNumber\": \"235632\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000002\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"342662\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000002\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"233352\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000003\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"563452\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000003\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"342646\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000003\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"674353\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000004\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"762342\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000004\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"234462\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000004\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"362689\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000004\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"123642\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000005\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"123356\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000005\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"143246\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000005\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"348635\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000006\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"784563\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000006\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"894542\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000007\",\r\n      \"isServed\": true\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/inventory/updatePinCodesInBulk",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"inventory",
+								"updatePinCodesInBulk"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"listOfPincodes\": [\r\n    {\r\n      \"pincodeNumber\": \"560085\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504300000000001\",\r\n      \"isServed\": true\r\n    },\r\n    {\r\n      \"pincodeNumber\": \"577432\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504300000000001\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"101001\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000002\",\r\n      \"isServed\": true\r\n    },\r\n    {\r\n      \"pincodeNumber\": \"235632\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000002\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"342662\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000002\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"233352\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000003\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"563452\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000003\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"342646\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000003\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"674353\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000004\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"762342\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000004\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"234462\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000004\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"362689\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000004\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"123642\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000005\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"123356\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000005\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"143246\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000005\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"348635\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000006\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"784563\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000006\",\r\n      \"isServed\": true\r\n    },\r\n\t{\r\n      \"pincodeNumber\": \"894542\",\r\n      \"latitude\": \"28.6139\",\r\n      \"longitude\": \"77.2090\",\r\n      \"district\": \"New Delhi\",\r\n      \"stateId\": \"S17329030504400000000007\",\r\n      \"isServed\": true\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/inventory/updatePinCodesInBulk",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"inventory",
+										"updatePinCodesInBulk"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 18:08:58 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"listOfPincodes\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"PINCODE_UPDATED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get State by Pincode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/inventory/getStateByPinCode?pincode=348635",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"inventory",
+								"getStateByPinCode"
+							],
+							"query": [
+								{
+									"key": "pincode",
+									"value": "348635"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8083/inventory/getStateByPinCode?pincode=348635",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"inventory",
+										"getStateByPinCode"
+									],
+									"query": [
+										{
+											"key": "pincode",
+											"value": "348635"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 18:16:59 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"S17329030504400000000006\",\n    \"name\": \"Kerala\",\n    \"firstWarehouseNumber\": \"WH001\",\n    \"secondWarehouseNumber\": \"WH004\",\n    \"thirdWarehouseNumber\": \"WH002\",\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"STATE_FETCHED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update States in Bulk",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"listOfStates\": [\r\n    {\r\n      \"name\": \"Karnataka\",\r\n      \"firstWarehouseNumber\": \"WH001\",\r\n      \"secondWarehouseNumber\": \"WH004\",\r\n      \"thirdWarehouseNumber\": \"WH002\"\r\n    },\r\n    {\r\n      \"name\": \"Telangana\",\r\n      \"firstWarehouseNumber\": \"WH004\",\r\n      \"secondWarehouseNumber\": \"WH001\",\r\n      \"thirdWarehouseNumber\": \"WH005\"\r\n    },\r\n\t{\r\n      \"name\": \"Maharashtra\",\r\n      \"firstWarehouseNumber\": \"WH002\",\r\n      \"secondWarehouseNumber\": \"WH001\",\r\n      \"thirdWarehouseNumber\": \"WH004\"\r\n    },\r\n\t{\r\n      \"name\": \"Gujarat\",\r\n      \"firstWarehouseNumber\": \"WH002\",\r\n      \"secondWarehouseNumber\": \"WH003\",\r\n      \"thirdWarehouseNumber\": \"WH004\"\r\n    },\r\n\t{\r\n      \"name\": \"Rajastan\",\r\n      \"firstWarehouseNumber\": \"WH003\",\r\n      \"secondWarehouseNumber\": \"WH002\",\r\n      \"thirdWarehouseNumber\": \"WH004\"\r\n    },\r\n\t{\r\n      \"name\": \"Kerala\",\r\n      \"firstWarehouseNumber\": \"WH001\",\r\n      \"secondWarehouseNumber\": \"WH004\",\r\n      \"thirdWarehouseNumber\": \"WH002\"\r\n    },\r\n\t{\r\n      \"name\": \"Uttar Pradesh\",\r\n      \"firstWarehouseNumber\": \"WH003\",\r\n      \"secondWarehouseNumber\": \"WH005\",\r\n      \"thirdWarehouseNumber\": \"WH002\"\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/inventory/updateStatesInBulk",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"inventory",
+								"updateStatesInBulk"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"listOfStates\": [\r\n    {\r\n      \"name\": \"Karnataka\",\r\n      \"firstWarehouseNumber\": \"WH001\",\r\n      \"secondWarehouseNumber\": \"WH004\",\r\n      \"thirdWarehouseNumber\": \"WH002\"\r\n    },\r\n    {\r\n      \"name\": \"Telangana\",\r\n      \"firstWarehouseNumber\": \"WH004\",\r\n      \"secondWarehouseNumber\": \"WH001\",\r\n      \"thirdWarehouseNumber\": \"WH005\"\r\n    },\r\n\t{\r\n      \"name\": \"Maharashtra\",\r\n      \"firstWarehouseNumber\": \"WH002\",\r\n      \"secondWarehouseNumber\": \"WH001\",\r\n      \"thirdWarehouseNumber\": \"WH004\"\r\n    },\r\n\t{\r\n      \"name\": \"Gujarat\",\r\n      \"firstWarehouseNumber\": \"WH002\",\r\n      \"secondWarehouseNumber\": \"WH003\",\r\n      \"thirdWarehouseNumber\": \"WH004\"\r\n    },\r\n\t{\r\n      \"name\": \"Rajastan\",\r\n      \"firstWarehouseNumber\": \"WH003\",\r\n      \"secondWarehouseNumber\": \"WH002\",\r\n      \"thirdWarehouseNumber\": \"WH004\"\r\n    },\r\n\t{\r\n      \"name\": \"Kerala\",\r\n      \"firstWarehouseNumber\": \"WH001\",\r\n      \"secondWarehouseNumber\": \"WH004\",\r\n      \"thirdWarehouseNumber\": \"WH002\"\r\n    },\r\n\t{\r\n      \"name\": \"Uttar Pradesh\",\r\n      \"firstWarehouseNumber\": \"WH003\",\r\n      \"secondWarehouseNumber\": \"WH005\",\r\n      \"thirdWarehouseNumber\": \"WH002\"\r\n    }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/inventory/updateStatesInBulk",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"inventory",
+										"updateStatesInBulk"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 17:57:30 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"listOfStates\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"STATE_CREATED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Stock",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"warehouseNumber\": \"WH004\",\r\n  \"sku\": \"445566\",\r\n  \"stockCount\": 400\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/inventory/updateStock",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"inventory",
+								"updateStock"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"warehouseNumber\": \"WH004\",\r\n  \"sku\": \"445566\",\r\n  \"stockCount\": 400\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/inventory/updateStock",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"inventory",
+										"updateStock"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Nov 2024 21:52:15 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": null,\n    \"warehouseNumber\": \"WH004\",\n    \"sku\": \"445566\",\n    \"stockCount\": 400,\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"STOCK_UPDATED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Stock in Bulk",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"listOfStocks\": [\r\n    {\r\n        \"warehouseNumber\": \"WH001\",\r\n        \"sku\": \"112233\",\r\n        \"stockCount\": 150\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH001\",\r\n        \"sku\": \"223344\",\r\n        \"stockCount\": 45\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH001\",\r\n        \"sku\": \"334455\",\r\n        \"stockCount\": 2\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH001\",\r\n        \"sku\": \"445566\",\r\n        \"stockCount\": 3\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH002\",\r\n        \"sku\": \"556677\",\r\n        \"stockCount\": 150\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH002\",\r\n        \"sku\": \"667788\",\r\n        \"stockCount\": 45\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH003\",\r\n        \"sku\": \"334455\",\r\n        \"stockCount\": 25\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH003\",\r\n        \"sku\": \"445566\",\r\n        \"stockCount\": 34\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH004\",\r\n        \"sku\": \"112233\",\r\n        \"stockCount\": 150\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH004\",\r\n        \"sku\": \"223344\",\r\n        \"stockCount\": 150\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH004\",\r\n        \"sku\": \"334455\",\r\n        \"stockCount\": 150\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH004\",\r\n        \"sku\": \"445566\",\r\n        \"stockCount\": 150\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH004\",\r\n        \"sku\": \"556677\",\r\n        \"stockCount\": 150\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH004\",\r\n        \"sku\": \"667788\",\r\n        \"stockCount\": 150\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH005\",\r\n        \"sku\": \"334455\",\r\n        \"stockCount\": 2\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH005\",\r\n        \"sku\": \"445566\",\r\n        \"stockCount\": 4\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH005\",\r\n        \"sku\": \"556677\",\r\n        \"stockCount\": 78\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH005\",\r\n        \"sku\": \"667788\",\r\n        \"stockCount\": 34\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/inventory/updateStockInBulk",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"inventory",
+								"updateStockInBulk"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"listOfStocks\": [\r\n    {\r\n        \"warehouseNumber\": \"WH001\",\r\n        \"sku\": \"112233\",\r\n        \"stockCount\": 150\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH001\",\r\n        \"sku\": \"223344\",\r\n        \"stockCount\": 45\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH001\",\r\n        \"sku\": \"334455\",\r\n        \"stockCount\": 2\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH001\",\r\n        \"sku\": \"445566\",\r\n        \"stockCount\": 3\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH002\",\r\n        \"sku\": \"556677\",\r\n        \"stockCount\": 150\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH002\",\r\n        \"sku\": \"667788\",\r\n        \"stockCount\": 45\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH003\",\r\n        \"sku\": \"334455\",\r\n        \"stockCount\": 25\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH003\",\r\n        \"sku\": \"445566\",\r\n        \"stockCount\": 34\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH004\",\r\n        \"sku\": \"112233\",\r\n        \"stockCount\": 150\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH004\",\r\n        \"sku\": \"223344\",\r\n        \"stockCount\": 150\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH004\",\r\n        \"sku\": \"334455\",\r\n        \"stockCount\": 150\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH004\",\r\n        \"sku\": \"445566\",\r\n        \"stockCount\": 150\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH004\",\r\n        \"sku\": \"556677\",\r\n        \"stockCount\": 150\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH004\",\r\n        \"sku\": \"667788\",\r\n        \"stockCount\": 150\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH005\",\r\n        \"sku\": \"334455\",\r\n        \"stockCount\": 2\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH005\",\r\n        \"sku\": \"445566\",\r\n        \"stockCount\": 4\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH005\",\r\n        \"sku\": \"556677\",\r\n        \"stockCount\": 78\r\n    },\r\n\t{\r\n        \"warehouseNumber\": \"WH005\",\r\n        \"sku\": \"667788\",\r\n        \"stockCount\": 34\r\n    }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/inventory/updateStockInBulk",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"inventory",
+										"updateStockInBulk"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 18:24:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"listOfStocks\": [],\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"STOCK_UPDATED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Stocks by Warehouse Numbers and SKUs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"listOfWarehouseNumbers\": [\r\n    \"WH001\",\r\n    \"WH004\"\r\n  ],\r\n  \"listOfSKUs\": [\r\n    \"112233\",\r\n    \"445566\",\r\n    \"556677\"\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/inventory/getStocksByWarehouseNumbersAndSKUs",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"inventory",
+								"getStocksByWarehouseNumbersAndSKUs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"listOfWarehouseNumbers\": [\r\n    \"WH001\",\r\n    \"WH004\"\r\n  ],\r\n  \"listOfSKUs\": [\r\n    \"112233\",\r\n    \"445566\",\r\n    \"556677\"\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/inventory/getStocksByWarehouseNumbersAndSKUs",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"inventory",
+										"getStocksByWarehouseNumbersAndSKUs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 18:27:32 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"listOfStocks\": [\n        {\n            \"id\": \"STK17329043432210000000001\",\n            \"name\": \"112233_WH001\",\n            \"warehouseNumber\": \"WH001\",\n            \"sku\": \"112233\",\n            \"stockCount\": 162,\n            \"creationDate\": null,\n            \"lastModifiedDate\": null,\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": \"STK17329046588570000000004\",\n            \"name\": \"445566_WH001\",\n            \"warehouseNumber\": \"WH001\",\n            \"sku\": \"445566\",\n            \"stockCount\": 3,\n            \"creationDate\": null,\n            \"lastModifiedDate\": null,\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": \"STK17329046588570000000009\",\n            \"name\": \"112233_WH004\",\n            \"warehouseNumber\": \"WH004\",\n            \"sku\": \"112233\",\n            \"stockCount\": 150,\n            \"creationDate\": null,\n            \"lastModifiedDate\": null,\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": \"STK17329046588590000000012\",\n            \"name\": \"445566_WH004\",\n            \"warehouseNumber\": \"WH004\",\n            \"sku\": \"445566\",\n            \"stockCount\": 150,\n            \"creationDate\": null,\n            \"lastModifiedDate\": null,\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": \"STK17329046588590000000013\",\n            \"name\": \"556677_WH004\",\n            \"warehouseNumber\": \"WH004\",\n            \"sku\": \"556677\",\n            \"stockCount\": 150,\n            \"creationDate\": null,\n            \"lastModifiedDate\": null,\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        }\n    ],\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"STOCK_UPDATED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Stocks by SKUs",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"listOfStrings\": [\r\n    \"112233\",\r\n    \"445566\",\r\n    \"556677\"\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/inventory/getStocksBySKUs",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"inventory",
+								"getStocksBySKUs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"listOfStrings\": [\r\n    \"112233\",\r\n    \"445566\",\r\n    \"556677\"\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/inventory/getStocksBySKUs",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"inventory",
+										"getStocksBySKUs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 19:37:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"listOfStocks\": [\n        {\n            \"id\": null,\n            \"name\": null,\n            \"warehouseNumber\": \"WH001\",\n            \"sku\": \"112233\",\n            \"stockCount\": 162,\n            \"creationDate\": null,\n            \"lastModifiedDate\": null,\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": null,\n            \"name\": null,\n            \"warehouseNumber\": \"WH001\",\n            \"sku\": \"445566\",\n            \"stockCount\": 3,\n            \"creationDate\": null,\n            \"lastModifiedDate\": null,\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": null,\n            \"name\": null,\n            \"warehouseNumber\": \"WH002\",\n            \"sku\": \"556677\",\n            \"stockCount\": 150,\n            \"creationDate\": null,\n            \"lastModifiedDate\": null,\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": null,\n            \"name\": null,\n            \"warehouseNumber\": \"WH003\",\n            \"sku\": \"112233\",\n            \"stockCount\": 500,\n            \"creationDate\": null,\n            \"lastModifiedDate\": null,\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": null,\n            \"name\": null,\n            \"warehouseNumber\": \"WH003\",\n            \"sku\": \"445566\",\n            \"stockCount\": 34,\n            \"creationDate\": null,\n            \"lastModifiedDate\": null,\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": null,\n            \"name\": null,\n            \"warehouseNumber\": \"WH004\",\n            \"sku\": \"112233\",\n            \"stockCount\": 150,\n            \"creationDate\": null,\n            \"lastModifiedDate\": null,\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": null,\n            \"name\": null,\n            \"warehouseNumber\": \"WH004\",\n            \"sku\": \"445566\",\n            \"stockCount\": 150,\n            \"creationDate\": null,\n            \"lastModifiedDate\": null,\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": null,\n            \"name\": null,\n            \"warehouseNumber\": \"WH004\",\n            \"sku\": \"556677\",\n            \"stockCount\": 150,\n            \"creationDate\": null,\n            \"lastModifiedDate\": null,\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": null,\n            \"name\": null,\n            \"warehouseNumber\": \"WH005\",\n            \"sku\": \"445566\",\n            \"stockCount\": 4,\n            \"creationDate\": null,\n            \"lastModifiedDate\": null,\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": null,\n            \"name\": null,\n            \"warehouseNumber\": \"WH005\",\n            \"sku\": \"556677\",\n            \"stockCount\": 78,\n            \"creationDate\": null,\n            \"lastModifiedDate\": null,\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        }\n    ],\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"STOCK_FETCHED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Stocks by SKUs by Excluding Warehouse numbers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"listOfWarehouseNumbers\": [\r\n    \"WH001\",\r\n    \"WH002\"\r\n  ],\r\n  \"listOfSKUs\": [\r\n    \"112233\",\r\n    \"445566\",\r\n    \"556677\"\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/inventory/getStocksBySKUsAndExcludingGivenWarehouseNumbers",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"inventory",
+								"getStocksBySKUsAndExcludingGivenWarehouseNumbers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"listOfWarehouseNumbers\": [\r\n    \"WH001\",\r\n    \"WH002\"\r\n  ],\r\n  \"listOfSKUs\": [\r\n    \"112233\",\r\n    \"445566\",\r\n    \"556677\"\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/inventory/getStocksBySKUsAndExcludingGivenWarehouseNumbers",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"inventory",
+										"getStocksBySKUsAndExcludingGivenWarehouseNumbers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 18:25:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"listOfStocks\": [\n        {\n            \"id\": \"STK17329046588570000000008\",\n            \"name\": \"445566_WH003\",\n            \"warehouseNumber\": \"WH003\",\n            \"sku\": \"445566\",\n            \"stockCount\": 34,\n            \"creationDate\": null,\n            \"lastModifiedDate\": null,\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": \"STK17329046588570000000009\",\n            \"name\": \"112233_WH004\",\n            \"warehouseNumber\": \"WH004\",\n            \"sku\": \"112233\",\n            \"stockCount\": 150,\n            \"creationDate\": null,\n            \"lastModifiedDate\": null,\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": \"STK17329046588590000000012\",\n            \"name\": \"445566_WH004\",\n            \"warehouseNumber\": \"WH004\",\n            \"sku\": \"445566\",\n            \"stockCount\": 150,\n            \"creationDate\": null,\n            \"lastModifiedDate\": null,\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": \"STK17329046588590000000013\",\n            \"name\": \"556677_WH004\",\n            \"warehouseNumber\": \"WH004\",\n            \"sku\": \"556677\",\n            \"stockCount\": 150,\n            \"creationDate\": null,\n            \"lastModifiedDate\": null,\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": \"STK17329046588590000000016\",\n            \"name\": \"445566_WH005\",\n            \"warehouseNumber\": \"WH005\",\n            \"sku\": \"445566\",\n            \"stockCount\": 4,\n            \"creationDate\": null,\n            \"lastModifiedDate\": null,\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": \"STK17329046588590000000017\",\n            \"name\": \"556677_WH005\",\n            \"warehouseNumber\": \"WH005\",\n            \"sku\": \"556677\",\n            \"stockCount\": 78,\n            \"creationDate\": null,\n            \"lastModifiedDate\": null,\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        }\n    ],\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"STOCK_FETCHED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Stock Movement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"warehouseNumber\": \"WH003\",\r\n  \"skuAndStock\": \"334455_250;667788_400;112233_500\",\r\n  \"receivedByEmployeeNumber\": \"EMP9876\",\r\n  \"movementType\": \"UP\",\r\n  \"reason\": \"STOCK_TRANSFER\",\r\n  //\"consignmentNumber\": \"CN56789\",\r\n  //\"logisticsCodeName\": \"ABC Logistics\",\r\n  //\"logisticsDelivererName\": \"John Doe\",\r\n  //\"logisticsDelivererNumber\": \"LD12345\",\r\n  \"isConsumed\": false,\r\n  \"status\": \"COMPLETED\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/inventory/createStockMovement",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"inventory",
+								"createStockMovement"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"warehouseNumber\": \"WH003\",\r\n  \"skuAndStock\": \"334455_250;667788_400;112233_500\",\r\n  \"receivedByEmployeeNumber\": \"EMP9876\",\r\n  \"movementType\": \"UP\",\r\n  \"reason\": \"STOCK_TRANSFER\",\r\n  //\"consignmentNumber\": \"CN56789\",\r\n  //\"logisticsCodeName\": \"ABC Logistics\",\r\n  //\"logisticsDelivererName\": \"John Doe\",\r\n  //\"logisticsDelivererNumber\": \"LD12345\",\r\n  \"isConsumed\": false,\r\n  \"status\": \"COMPLETED\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/inventory/createStockMovement",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"inventory",
+										"createStockMovement"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 18:37:38 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"\",\n    \"warehouseNumber\": \"WH003\",\n    \"skuAndStock\": \"334455_250;667788_400;112233_500\",\n    \"transactionDate\": null,\n    \"completionDate\": null,\n    \"receivedByEmployeeNumber\": \"EMP9876\",\n    \"movementType\": \"UP\",\n    \"reason\": \"STOCK_TRANSFER\",\n    \"consignmentNumber\": null,\n    \"logisticsCodeName\": null,\n    \"logisticsDelivererName\": null,\n    \"logisticsDelivererNumber\": null,\n    \"isConsumed\": false,\n    \"status\": \"COMPLETED\",\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"STOCK_MOVEMENT_CREATED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Stock Movement",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"warehouseNumber\": \"WH001\",\r\n  \"skuAndStock\": \"SKU1234_100;SKU1234_100;SKU1234_100\",\r\n  \"receivedByEmployeeNumber\": \"EMP9876\",\r\n  \"movementType\": \"DOWN\",\r\n  \"reason\": \"DELIVERY_FULFILLMENT\",\r\n  \"consignmentNumber\": \"CN56789\",\r\n  \"logisticsCodeName\": \"ABC Logistics\",\r\n  \"logisticsDelivererName\": \"John Doe\",\r\n  \"logisticsDelivererNumber\": \"LD12345\",\r\n  \"isConsumed\": true,\r\n  \"status\": \"INITIATED\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/inventory/updateStockMovement",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"inventory",
+								"updateStockMovement"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Warehouse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Kolkata Warehouse\",\r\n  \"warehouseNumber\": \"WH005\",\r\n  \"pinCode\": \"700016\",\r\n  \"address\": \"123 Warehouse Street, Industrial Area\",\r\n  \"latitude\": \"12.948801\",\r\n  \"longitude\": \"77.519202\",\r\n  \"district\": \"Taltala\",\r\n  \"stateId\": \"ST001\",\r\n  \"officialPhoneNumber\": \"+911234567890\",\r\n  \"officialEmailId\": \"info@bangalorewarehouse.com\",\r\n  \"pointOfContactName\": \"Jane Doe\",\r\n  \"pointOfContactPhoneNumber\": \"+911234567891\",\r\n  \"secondPOC\": \"John Smith\",\r\n  \"secondPOCNumber\": \"+911234567892\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/inventory/createWarehouse",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"inventory",
+								"createWarehouse"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Kolkata Warehouse\",\r\n  \"warehouseNumber\": \"WH005\",\r\n  \"pinCode\": \"700016\",\r\n  \"address\": \"123 Warehouse Street, Industrial Area\",\r\n  \"latitude\": \"12.948801\",\r\n  \"longitude\": \"77.519202\",\r\n  \"district\": \"Taltala\",\r\n  \"stateId\": \"ST001\",\r\n  \"officialPhoneNumber\": \"+911234567890\",\r\n  \"officialEmailId\": \"info@bangalorewarehouse.com\",\r\n  \"pointOfContactName\": \"Jane Doe\",\r\n  \"pointOfContactPhoneNumber\": \"+911234567891\",\r\n  \"secondPOC\": \"John Smith\",\r\n  \"secondPOCNumber\": \"+911234567892\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/inventory/createWarehouse",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"inventory",
+										"createWarehouse"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 17:39:19 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": \"Kolkata Warehouse\",\n    \"warehouseNumber\": \"WH005\",\n    \"isActive\": null,\n    \"pinCode\": \"700016\",\n    \"address\": \"123 Warehouse Street, Industrial Area\",\n    \"latitude\": \"12.948801\",\n    \"longitude\": \"77.519202\",\n    \"district\": \"Taltala\",\n    \"stateId\": \"ST001\",\n    \"officialPhoneNumber\": \"+911234567890\",\n    \"officialEmailId\": \"info@bangalorewarehouse.com\",\n    \"pointOfContactName\": \"Jane Doe\",\n    \"pointOfContactPhoneNumber\": \"+911234567891\",\n    \"secondPOC\": \"John Smith\",\n    \"secondPOCNumber\": \"+911234567892\",\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"WAREHOUSE_CREATED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Warehouse",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Kolkata Warehouse\",\r\n  \"warehouseNumber\": \"WH005\",\r\n  \"pinCode\": \"700016\",\r\n  \"address\": \"123 Warehouse Street, Industrial Area\",\r\n  \"latitude\": \"12.948801\",\r\n  \"longitude\": \"77.519202\",\r\n  \"district\": \"Taltala\",\r\n  \"stateId\": \"ST002\",\r\n  \"officialPhoneNumber\": \"+911234567890\",\r\n  \"officialEmailId\": \"info@bangalorewarehouse.com\",\r\n  \"pointOfContactName\": \"Jane Doe\",\r\n  \"pointOfContactPhoneNumber\": \"+911234567891\",\r\n  \"secondPOC\": \"John Smith\",\r\n  \"secondPOCNumber\": \"+911234567892\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/inventory/updateWarehouse",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"inventory",
+								"updateWarehouse"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Kolkata Warehouse\",\r\n  \"warehouseNumber\": \"WH005\",\r\n  \"pinCode\": \"700016\",\r\n  \"address\": \"123 Warehouse Street, Industrial Area\",\r\n  \"latitude\": \"12.948801\",\r\n  \"longitude\": \"77.519202\",\r\n  \"district\": \"Taltala\",\r\n  \"stateId\": \"ST002\",\r\n  \"officialPhoneNumber\": \"+911234567890\",\r\n  \"officialEmailId\": \"info@bangalorewarehouse.com\",\r\n  \"pointOfContactName\": \"Jane Doe\",\r\n  \"pointOfContactPhoneNumber\": \"+911234567891\",\r\n  \"secondPOC\": \"John Smith\",\r\n  \"secondPOCNumber\": \"+911234567892\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/inventory/updateWarehouse",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"inventory",
+										"updateWarehouse"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 17:39:38 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": \"Kolkata Warehouse\",\n    \"warehouseNumber\": \"WH005\",\n    \"isActive\": null,\n    \"pinCode\": \"700016\",\n    \"address\": \"123 Warehouse Street, Industrial Area\",\n    \"latitude\": \"12.948801\",\n    \"longitude\": \"77.519202\",\n    \"district\": \"Taltala\",\n    \"stateId\": \"ST002\",\n    \"officialPhoneNumber\": \"+911234567890\",\n    \"officialEmailId\": \"info@bangalorewarehouse.com\",\n    \"pointOfContactName\": \"Jane Doe\",\n    \"pointOfContactPhoneNumber\": \"+911234567891\",\n    \"secondPOC\": \"John Smith\",\n    \"secondPOCNumber\": \"+911234567892\",\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"WAREHOUSE_UPDATED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Warehouse by Number",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/inventory/getWarehouseByNumber?warehouseNumber=WH004",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"inventory",
+								"getWarehouseByNumber"
+							],
+							"query": [
+								{
+									"key": "warehouseNumber",
+									"value": "WH004"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8083/inventory/getWarehouseByNumber?warehouseNumber=WH004",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"inventory",
+										"getWarehouseByNumber"
+									],
+									"query": [
+										{
+											"key": "warehouseNumber",
+											"value": "WH004"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 17:40:44 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": \"Hyderabad Warehouse\",\n    \"warehouseNumber\": \"WH004\",\n    \"isActive\": null,\n    \"pinCode\": \"500082\",\n    \"address\": \"123 Warehouse Street, Industrial Area\",\n    \"latitude\": \"17.418122\",\n    \"longitude\": \"78.449197\",\n    \"district\": \"Banjara Hills\",\n    \"stateId\": \"ST001\",\n    \"officialPhoneNumber\": \"+911234567890\",\n    \"officialEmailId\": \"info@bangalorewarehouse.com\",\n    \"pointOfContactName\": \"Jane Doe\",\n    \"pointOfContactPhoneNumber\": \"+911234567891\",\n    \"secondPOC\": \"John Smith\",\n    \"secondPOCNumber\": \"+911234567892\",\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"WAREHOUSE_FETCHED_SUCCESSFULLY\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Notification Service",
+			"item": [
+				{
+					"name": "Validate OTP",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"example@domain.com\",\r\n  \"otp\": 123456\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/notification/validateOTP",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"notification",
+								"validateOTP"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Resend Email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8087/auth/notification/resendEmail/{emailId}",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"auth",
+								"notification",
+								"resendEmail",
+								"{emailId}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order Service",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"grandTotal\": 1200.00,\r\n  \"tax\": 100.00,\r\n  \"discount\": 50.00,\r\n  \"shippingFee\": 20.00,\r\n  \"payableTotal\": 1270.00,\r\n  \"billingAddress\": \"123 Main St, City, Country\",\r\n  \"shippingAddress\": \"456 Side St, City, Country\",\r\n  \"shippingPincode\": \"560085\",\r\n  \"customerEmail\": \"nishalb7599@gmail.com\",\r\n  \"customerPhone\": \"4536565444\",\r\n  \"customerName\": \"John Doe\",\r\n  \"orderItems\": [\r\n    {\r\n      \"productId\": \"prod123\",\r\n      \"sku\": \"112233\",\r\n      \"unitPrice\": 500.00,\r\n      \"salesPrice\": 450.00,\r\n      \"discount\": 20.00,\r\n      \"shippingFee\": 5.00,\r\n      \"tax\": 25.00,\r\n      \"quantity\": 10,\r\n      \"totalPrice\": 1000.00,\r\n      \"totalSalesPrice\": 900.00\r\n    },\r\n    {\r\n      \"productId\": \"prod123\",\r\n      \"sku\": \"223344\",\r\n      \"unitPrice\": 500.00,\r\n      \"salesPrice\": 450.00,\r\n      \"discount\": 20.00,\r\n      \"shippingFee\": 5.00,\r\n      \"tax\": 25.00,\r\n      \"quantity\": 10,\r\n      \"totalPrice\": 1000.00,\r\n      \"totalSalesPrice\": 900.00\r\n    },\r\n    {\r\n      \"productId\": \"prod123\",\r\n      \"sku\": \"334455\",\r\n      \"unitPrice\": 500.00,\r\n      \"salesPrice\": 450.00,\r\n      \"discount\": 20.00,\r\n      \"shippingFee\": 5.00,\r\n      \"tax\": 25.00,\r\n      \"quantity\": 10,\r\n      \"totalPrice\": 1000.00,\r\n      \"totalSalesPrice\": 900.00\r\n    },\r\n    {\r\n      \"productId\": \"prod123\",\r\n      \"sku\": \"445566\",\r\n      \"unitPrice\": 500.00,\r\n      \"salesPrice\": 450.00,\r\n      \"discount\": 20.00,\r\n      \"shippingFee\": 5.00,\r\n      \"tax\": 25.00,\r\n      \"quantity\": 10,\r\n      \"totalPrice\": 1000.00,\r\n      \"totalSalesPrice\": 900.00\r\n    }\r\n  ],\r\n  \"isEmailTriggerNeeded\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/order/createOrder",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"order",
+								"createOrder"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"grandTotal\": 1200.00,\r\n  \"tax\": 100.00,\r\n  \"discount\": 50.00,\r\n  \"shippingFee\": 20.00,\r\n  \"payableTotal\": 1270.00,\r\n  \"billingAddress\": \"123 Main St, City, Country\",\r\n  \"shippingAddress\": \"456 Side St, City, Country\",\r\n  \"shippingPincode\": \"560085\",\r\n  \"customerEmail\": \"nishalb7599@gmail.com\",\r\n  \"customerPhone\": \"4536565444\",\r\n  \"customerName\": \"John Doe\",\r\n  \"orderItems\": [\r\n    {\r\n      \"productId\": \"prod123\",\r\n      \"sku\": \"112233\",\r\n      \"unitPrice\": 500.00,\r\n      \"salesPrice\": 450.00,\r\n      \"discount\": 20.00,\r\n      \"shippingFee\": 5.00,\r\n      \"tax\": 25.00,\r\n      \"quantity\": 10,\r\n      \"totalPrice\": 1000.00,\r\n      \"totalSalesPrice\": 900.00\r\n    },\r\n    {\r\n      \"productId\": \"prod123\",\r\n      \"sku\": \"223344\",\r\n      \"unitPrice\": 500.00,\r\n      \"salesPrice\": 450.00,\r\n      \"discount\": 20.00,\r\n      \"shippingFee\": 5.00,\r\n      \"tax\": 25.00,\r\n      \"quantity\": 10,\r\n      \"totalPrice\": 1000.00,\r\n      \"totalSalesPrice\": 900.00\r\n    },\r\n    {\r\n      \"productId\": \"prod123\",\r\n      \"sku\": \"334455\",\r\n      \"unitPrice\": 500.00,\r\n      \"salesPrice\": 450.00,\r\n      \"discount\": 20.00,\r\n      \"shippingFee\": 5.00,\r\n      \"tax\": 25.00,\r\n      \"quantity\": 10,\r\n      \"totalPrice\": 1000.00,\r\n      \"totalSalesPrice\": 900.00\r\n    },\r\n    {\r\n      \"productId\": \"prod123\",\r\n      \"sku\": \"445566\",\r\n      \"unitPrice\": 500.00,\r\n      \"salesPrice\": 450.00,\r\n      \"discount\": 20.00,\r\n      \"shippingFee\": 5.00,\r\n      \"tax\": 25.00,\r\n      \"quantity\": 10,\r\n      \"totalPrice\": 1000.00,\r\n      \"totalSalesPrice\": 900.00\r\n    }\r\n  ],\r\n  \"isEmailTriggerNeeded\": true\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8085/order/createOrder",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"order",
+										"createOrder"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 20:12:38 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"DRAFT_ORDER_CREATED_SUCCESSFULLLY\",\n    \"rejectedSKUs\": null,\n    \"orderNumber\": \"0000000001\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Order Placed",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"orderNumber\": \"0000000001\",\r\n  \"billingAddress\": \"123 Main St, City, Country\",\r\n  \"shippingAddress\": \"456 Side St, City, Country\",\r\n  \"shippingPincode\": \"560085\",\r\n  \"customerEmail\": \"nishalb7599@gmail.com\",\r\n  \"customerPhone\": \"3454354344\",\r\n  \"customerName\": \"John Doe\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/order/orderPlaced",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"order",
+								"orderPlaced"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"orderNumber\": \"0000000001\",\r\n  \"billingAddress\": \"123 Main St, City, Country\",\r\n  \"shippingAddress\": \"456 Side St, City, Country\",\r\n  \"shippingPincode\": \"560085\",\r\n  \"customerEmail\": \"nishalb7599@gmail.com\",\r\n  \"customerPhone\": \"3454354344\",\r\n  \"customerName\": \"John Doe\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8085/order/orderPlaced",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"order",
+										"orderPlaced"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Nov 2024 06:16:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"ORDER_PLACED_SUCCESSFULLY\",\n    \"rejectedSKUs\": null,\n    \"orderNumber\": \"0000000001\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"orderNumber\": \"0000000001\",\r\n  \"grandTotal\": 1200.00,\r\n  \"tax\": 100.00,\r\n  \"discount\": 50.00,\r\n  \"shippingFee\": 20.00,\r\n  \"payableTotal\": 1270.00,\r\n  \"customerId\": \"customer456\",\r\n  \"billingAddress\": \"123 Main St, City, Country\",\r\n  \"shippingAddress\": \"456 Side St, City, Country\",\r\n  \"shippingPincode\": \"123456\",\r\n  \"customerEmail\": \"customer@example.com\",\r\n  \"customerPhone\": \"9876543210\",\r\n  \"customerName\": \"John Doe\",\r\n  \"status\": \"SHIPPED\",\r\n  \"statusLog\": \"Order has been shipped\",\r\n  \"logisticsCodeName\": \"DHL\",\r\n  \"logisticsTrackingId\": \"TRACK123\",\r\n  \"deliveryDate\": \"2024-12-01T10:00:00Z\",\r\n  \"pickupDate\": \"2024-12-02T15:00:00Z\",\r\n  \"orderItems\": [\r\n    {\r\n      \"orderItemNumber\": \"ITEM001\",\r\n      \"sku\": \"SKU1234\",\r\n      \"unitPrice\": 500.00,\r\n      \"salesPrice\": 450.00,\r\n      \"discount\": 20.00,\r\n      \"shippingFee\": 5.00,\r\n      \"tax\": 25.00,\r\n      \"quantity\": 2,\r\n      \"totalPrice\": 1000.00,\r\n      \"totalSalesPrice\": 900.00,\r\n      \"status\": \"SHIPPED\",\r\n      \"statusLog\": \"Item shipped\",\r\n      \"logisticsCodeName\": \"DHL\",\r\n      \"logisticsTrackingId\": \"ITEMTRACK123\",\r\n      \"consignmentItemNumber\": \"CITEM123\",\r\n      \"consignmentNumber\": \"CONS123\",\r\n      \"orderNumber\": \"ORD1001\",\r\n      \"warehouseNumber\": \"WH001\"\r\n    },\r\n    {\r\n      \"orderItemNumber\": \"ITEM001\",\r\n      \"sku\": \"SKU1234\",\r\n      \"unitPrice\": 500.00,\r\n      \"salesPrice\": 450.00,\r\n      \"discount\": 20.00,\r\n      \"shippingFee\": 5.00,\r\n      \"tax\": 25.00,\r\n      \"quantity\": 2,\r\n      \"totalPrice\": 1000.00,\r\n      \"totalSalesPrice\": 900.00,\r\n      \"status\": \"SHIPPED\",\r\n      \"statusLog\": \"Item shipped\",\r\n      \"logisticsCodeName\": \"DHL\",\r\n      \"logisticsTrackingId\": \"ITEMTRACK123\",\r\n      \"consignmentItemNumber\": \"CITEM123\",\r\n      \"consignmentNumber\": \"CONS123\",\r\n      \"orderNumber\": \"ORD1001\",\r\n      \"warehouseNumber\": \"WH001\"\r\n    }\r\n  ],\r\n  \"isEmailTriggerNeeded\": true,\r\n  \"isConsumed\": false\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/order/updateOrder",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"order",
+								"updateOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Order by Order Number",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/order/cancelOrderByOrderNumber?orderNumber=0000000003",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"order",
+								"cancelOrderByOrderNumber"
+							],
+							"query": [
+								{
+									"key": "orderNumber",
+									"value": "0000000003"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:8085/order/cancelOrderByOrderNumber?orderNumber=0000000003",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"order",
+										"cancelOrderByOrderNumber"
+									],
+									"query": [
+										{
+											"key": "orderNumber",
+											"value": "0000000003"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Nov 2024 18:47:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"ORDER_CANCELLED_SUCCESSFULLY\",\n    \"rejectedSKUs\": null,\n    \"orderNumber\": \"0000000003\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Return Order Items",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"orderNumber\": \"0000000002\",\r\n  \"orderItems\": [\r\n    {\r\n      \"orderItemNumber\": \"0000000002.1\"\r\n    }/*,\r\n    {\r\n      \"orderItemNumber\": \"0000000001.4\"\r\n    }*/\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/order/returnOrderItems",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"order",
+								"returnOrderItems"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"orderNumber\": \"0000000002\",\r\n  \"orderItems\": [\r\n    {\r\n      \"orderItemNumber\": \"0000000002.1\"\r\n    }/*,\r\n    {\r\n      \"orderItemNumber\": \"0000000001.4\"\r\n    }*/\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8085/order/returnOrderItems",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"order",
+										"returnOrderItems"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Nov 2024 19:23:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"RETURN_REQUEST_INITIATED_SUCCESSFULLY\",\n    \"rejectedSKUs\": null,\n    \"orderNumber\": \"0000000002\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Replace Order Items",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"orderNumber\": \"0000000001\",\r\n  \"orderItems\": [\r\n    {\r\n      \"orderItemNumber\": \"0000000001.2\"\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/order/replaceOrderItems",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"order",
+								"replaceOrderItems"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"orderNumber\": \"0000000001\",\r\n  \"orderItems\": [\r\n    {\r\n      \"orderItemNumber\": \"0000000001.2\"\r\n    }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8085/order/replaceOrderItems",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"order",
+										"replaceOrderItems"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Nov 2024 18:36:46 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"REPLACEMENT_REQUEST_INITIATED_SUCCESSFULLY\",\n    \"rejectedSKUs\": null,\n    \"orderNumber\": \"0000000001\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Product Service",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Product Electronics Name3\",\r\n  \"sku\": \"667788\",\r\n  \"price\": 234.00,\r\n  \"isActive\": true,\r\n  \"description\": \"A detailed description of the product\",\r\n  \"categoryId\": \"CAT17328909492240000000001\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/product/createProduct",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"product",
+								"createProduct"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Product Electronics Name3\",\r\n  \"sku\": \"667788\",\r\n  \"price\": 234.00,\r\n  \"isActive\": true,\r\n  \"description\": \"A detailed description of the product\",\r\n  \"categoryId\": \"CAT17328909492240000000001\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8082/product/createProduct",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"product",
+										"createProduct"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 15:04:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": \"Product Electronics Name3\",\n    \"sku\": \"667788\",\n    \"price\": 234,\n    \"isActive\": true,\n    \"description\": \"A detailed description of the product\",\n    \"categoryId\": \"CAT17328909492240000000001\",\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"UNKNOWN_EXCEPTION_OCCURRED\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Product Apparel Name12\",\r\n  \"sku\": \"334455\",\r\n  \"price\": 64.67,\r\n  //\"isActive\": true,\r\n  \"description\": \"A detailed description of the product\",\r\n  \"categoryId\": \"CAT17328910734800000000002\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/product/updateProduct",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"product",
+								"updateProduct"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Product Apparel Name12\",\r\n  \"sku\": \"334455\",\r\n  \"price\": 64.67,\r\n  //\"isActive\": true,\r\n  \"description\": \"A detailed description of the product\",\r\n  \"categoryId\": \"CAT17328910734800000000002\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8082/product/updateProduct",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"product",
+										"updateProduct"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 15:00:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": \"Product Apparel Name12\",\n    \"sku\": \"334455\",\n    \"price\": 64.67,\n    \"isActive\": null,\n    \"description\": \"A detailed description of the product\",\n    \"categoryId\": \"CAT17328910734800000000002\",\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"UNKNOWN_EXCEPTION_OCCURRED\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/product/getAllProducts",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"product",
+								"getAllProducts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/product/getAllProducts",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"product",
+										"getAllProducts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 15:01:52 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"listOfProducts\": [\n        {\n            \"id\": \"PROD17328921101000000000001\",\n            \"name\": \"Product Electronics Name1\",\n            \"sku\": \"112233\",\n            \"price\": 100.5,\n            \"isActive\": true,\n            \"description\": \"A detailed description of the product\",\n            \"categoryId\": \"CAT17328909492240000000001\",\n            \"creationDate\": \"2024-11-29T20:25:10.095189+05:30\",\n            \"lastModifiedDate\": \"2024-11-29T20:25:10.095189+05:30\",\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": \"PROD17328922817600000000001\",\n            \"name\": \"Product Electronics Name2\",\n            \"sku\": \"223344\",\n            \"price\": 150.5,\n            \"isActive\": true,\n            \"description\": \"A detailed description of the product\",\n            \"categoryId\": \"CAT17328909492240000000001\",\n            \"creationDate\": \"2024-11-29T20:28:01.728956+05:30\",\n            \"lastModifiedDate\": \"2024-11-29T20:28:01.728956+05:30\",\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": \"PROD17328923286010000000002\",\n            \"name\": \"Product Apparel Name12\",\n            \"sku\": \"334455\",\n            \"price\": 64.67,\n            \"isActive\": true,\n            \"description\": \"A detailed description of the product\",\n            \"categoryId\": \"CAT17328910734800000000002\",\n            \"creationDate\": \"2024-11-29T20:28:48.60078+05:30\",\n            \"lastModifiedDate\": \"2024-11-29T20:30:17.553328+05:30\",\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": \"PROD17328923393120000000003\",\n            \"name\": \"Product Apparel Name2\",\n            \"sku\": \"445566\",\n            \"price\": 81,\n            \"isActive\": true,\n            \"description\": \"A detailed description of the product\",\n            \"categoryId\": \"CAT17328910734800000000002\",\n            \"creationDate\": \"2024-11-29T20:28:59.310881+05:30\",\n            \"lastModifiedDate\": \"2024-11-29T20:28:59.310881+05:30\",\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        }\n    ],\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"PRODUCT_FETCHED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Product by SKU",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/product/getProductBySKU?sku=445566",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"product",
+								"getProductBySKU"
+							],
+							"query": [
+								{
+									"key": "sku",
+									"value": "445566"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/product/getProductBySKU?sku=445566",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"product",
+										"getProductBySKU"
+									],
+									"query": [
+										{
+											"key": "sku",
+											"value": "445566"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 15:01:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": \"Product Apparel Name2\",\n    \"sku\": \"445566\",\n    \"price\": 81,\n    \"isActive\": true,\n    \"description\": \"A detailed description of the product\",\n    \"categoryId\": \"CAT17328910734800000000002\",\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"PRODUCT_FETCHED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Products by SKUs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"listOfStrings\": [\r\n    \"Product1\",\r\n    \"Product2\",\r\n    \"Product3\"\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/product/getProductsBySKUs",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"product",
+								"getProductsBySKUs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Apparel\",\r\n  \"description\": \"Clothes and outfits\",\r\n  \"isActive\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/product/createCategory",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"product",
+								"createCategory"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Apparel\",\r\n  \"description\": \"Clothes and outfits\",\r\n  \"isActive\": true\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8082/product/createCategory",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"product",
+										"createCategory"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 14:37:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": \"Apparel\",\n    \"description\": \"Clothes and outfits\",\n    \"isActive\": true,\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"CATEGORY_CREATED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Electronics\",\r\n  \"description\": \"Abc Devices and gadgets including phones, laptops, etc.\",\r\n  \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/product/updateCategory",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"product",
+								"updateCategory"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Electronics\",\r\n  \"description\": \"Abc Devices and gadgets including phones, laptops, etc.\",\r\n  \"isActive\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8082/product/updateCategory",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"product",
+										"updateCategory"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 14:51:15 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": \"Electronics\",\n    \"description\": \"Abc Devices and gadgets including phones, laptops, etc.\",\n    \"isActive\": true,\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"CATEGORY_UPDATED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/product/getAllCategories",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"product",
+								"getAllCategories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/product/getAllCategories",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"product",
+										"getAllCategories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 14:52:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"listOfCategories\": [\n        {\n            \"id\": \"CAT17328909492240000000001\",\n            \"name\": \"Electronics\",\n            \"description\": \"Abc Devices and gadgets including phones, laptops, etc.\",\n            \"isActive\": true,\n            \"creationDate\": \"2024-11-29T20:05:49.197131+05:30\",\n            \"lastModifiedDate\": \"2024-11-29T20:21:15.17205+05:30\",\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        },\n        {\n            \"id\": \"CAT17328910734800000000002\",\n            \"name\": \"Apparel\",\n            \"description\": \"Clothes and outfits\",\n            \"isActive\": true,\n            \"creationDate\": \"2024-11-29T20:07:53.479916+05:30\",\n            \"lastModifiedDate\": \"2024-11-29T20:07:53.479916+05:30\",\n            \"responseStatus\": null,\n            \"responseMessage\": null\n        }\n    ],\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"CATEGORY_FETCHED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Category by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/product/getCategoryByName?name=Electronics",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"product",
+								"getCategoryByName"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Electronics"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/product/getCategoryByName?name=Electronics",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"product",
+										"getCategoryByName"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Electronics"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 14:52:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": \"Electronics\",\n    \"description\": \"Abc Devices and gadgets including phones, laptops, etc.\",\n    \"isActive\": true,\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"CATEGORY_FETCHED_SUCCESSFULLY\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User Service",
+			"item": [
+				{
+					"name": "Create Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"John Dalton\",\r\n  \"phone\": \"+917125566890\",\r\n  \"email\": \"johndoe3@example.com\",\r\n  \"address\": \"123 Main St, Springfield, IL\",\r\n  \"pincode\": \"560056\",\r\n  \"isActive\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8084/user/createCustomer",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"user",
+								"createCustomer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"John Dalton\",\r\n  \"phone\": \"+917125566890\",\r\n  \"email\": \"johndoe3@example.com\",\r\n  \"address\": \"123 Main St, Springfield, IL\",\r\n  \"pincode\": \"560056\",\r\n  \"isActive\": true\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8084/user/createCustomer",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"user",
+										"createCustomer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 17:16:06 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": \"John Dalton\",\n    \"phone\": \"+917125566890\",\n    \"email\": \"johndoe3@example.com\",\n    \"address\": \"123 Main St, Springfield, IL\",\n    \"pincode\": \"560056\",\n    \"isActive\": true,\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"UNKNOWN_EXCEPTION_OCCURRED\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"John Doest\",\r\n  \"phone\": \"+917555567890\",\r\n  \"email\": \"johndoe1@example.com\",\r\n  \"address\": \"123 Main St, Springfield, IL\",\r\n  //\"pincode\": \"560055\",\r\n  \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8084/user/updateCustomer",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"user",
+								"updateCustomer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"John Doest\",\r\n  \"phone\": \"+917555567890\",\r\n  \"email\": \"johndoe1@example.com\",\r\n  \"address\": \"123 Main St, Springfield, IL\",\r\n  //\"pincode\": \"560055\",\r\n  \"isActive\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8084/user/updateCustomer",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"user",
+										"updateCustomer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 15:19:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": \"John Doest\",\n    \"phone\": \"+917555567890\",\n    \"email\": \"johndoe1@example.com\",\n    \"address\": \"123 Main St, Springfield, IL\",\n    \"pincode\": null,\n    \"isActive\": true,\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"UNKNOWN_EXCEPTION_OCCURRED\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Customer by Phone and Email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/user/getCustomerByPhoneAndEmail?email=johndoe3@example.com&phone=+917125566890",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"user",
+								"getCustomerByPhoneAndEmail"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "johndoe3@example.com"
+								},
+								{
+									"key": "phone",
+									"value": "+917125566890"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8084/user/getCustomerByPhoneAndEmail?email=johndoe3@example.com&phone=+917125566890",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"user",
+										"getCustomerByPhoneAndEmail"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "johndoe3@example.com"
+										},
+										{
+											"key": "phone",
+											"value": "+917125566890"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 17:16:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": \"John Dalton\",\n    \"phone\": \"+917125566890\",\n    \"email\": \"johndoe3@example.com\",\n    \"address\": \"123 Main St, Springfield, IL\",\n    \"pincode\": \"560056\",\n    \"isActive\": true,\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"CUSTOMER_FETCHED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Customer by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/user/getCustomerById?id=CUST17328933843590000000002",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"user",
+								"getCustomerById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "CUST17328933843590000000002"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8084/user/getCustomerById?id=CUST17328933843590000000002",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"user",
+										"getCustomerById"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "CUST17328933843590000000002"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 17:15:15 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"CUST17328933843590000000002\",\n    \"name\": \"John Doest\",\n    \"phone\": \"+917555567890\",\n    \"email\": \"johndoe1@example.com\",\n    \"address\": \"123 Main St, Springfield, IL\",\n    \"pincode\": \"560055\",\n    \"isActive\": true,\n    \"creationDate\": \"2024-11-29T20:46:24.358583+05:30\",\n    \"lastModifiedDate\": \"2024-11-29T20:49:25.709181+05:30\",\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"CUSTOMER_FETCHED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Department",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Administration\",\r\n  \"isActive\": true,\r\n  \"isSpecialAccessEnabled\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8084/user/createDepartment",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"user",
+								"createDepartment"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Administration\",\r\n  \"isActive\": true,\r\n  \"isSpecialAccessEnabled\": true\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8084/user/createDepartment",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"user",
+										"createDepartment"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 17:19:03 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": \"Administration\",\n    \"isActive\": true,\n    \"isSpecialAccessEnabled\": true,\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"DEPARTMENT_CREATED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Department",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Human Resources\",\r\n  \"isActive\": false,\r\n  \"isSpecialAccessEnabled\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8084/user/updateDepartment",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"user",
+								"updateDepartment"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Human Resources\",\r\n  \"isActive\": false,\r\n  \"isSpecialAccessEnabled\": true\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8084/user/updateDepartment",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"user",
+										"updateDepartment"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 17:17:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": \"Human Resources\",\n    \"isActive\": false,\n    \"isSpecialAccessEnabled\": true,\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"DEPARTMENT_UPDATED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Department by Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/user/getDepartmentByName?name=Human Resources",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"user",
+								"getDepartmentByName"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Human Resources"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8084/user/getDepartmentByName?name=Human Resources",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"user",
+										"getDepartmentByName"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Human Resources"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 17:18:29 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": \"Human Resources\",\n    \"isActive\": false,\n    \"isSpecialAccessEnabled\": true,\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"DEPARTMENT_FETCHED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Employee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"employeeNumber\": \"345672\",\r\n  \"name\": \"John Doesss\",\r\n  \"roleName\": \"Data Analyst\",\r\n  \"departmentName\": \"Logistics Inbound\",\r\n  \"phone\": \"9876543210\",\r\n  \"secondaryPhone\": \"0123456789\",\r\n  \"personalEmail\": \"johndoe@email.com\",\r\n  \"officialEmail\": \"john.doe@company.com\",\r\n  \"officialPhoneNumber\": \"022-12345678\",\r\n  \"isActive\": true,\r\n  \"address\": \"1234 Street Name, City, State, Country\",\r\n  \"pincode\": \"123456\",\r\n  \"warehouseNumber\": \"WH001\",\r\n  \"joiningDate\": \"2024-11-15\",\r\n  \"salary\": 60000.00,\r\n  \"reporterName\": \"Jane Smith\",\r\n  \"reporterEmployeeNumber\": \"345671\",\r\n  \"isPresentlyWorkingInThisCompany\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8084/user/createEmployee",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"user",
+								"createEmployee"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"employeeNumber\": \"345672\",\r\n  \"name\": \"John Doesss\",\r\n  \"roleName\": \"Data Analyst\",\r\n  \"departmentName\": \"Logistics Inbound\",\r\n  \"phone\": \"9876543210\",\r\n  \"secondaryPhone\": \"0123456789\",\r\n  \"personalEmail\": \"johndoe@email.com\",\r\n  \"officialEmail\": \"john.doe@company.com\",\r\n  \"officialPhoneNumber\": \"022-12345678\",\r\n  \"isActive\": true,\r\n  \"address\": \"1234 Street Name, City, State, Country\",\r\n  \"pincode\": \"123456\",\r\n  \"warehouseNumber\": \"WH001\",\r\n  \"joiningDate\": \"2024-11-15\",\r\n  \"salary\": 60000.00,\r\n  \"reporterName\": \"Jane Smith\",\r\n  \"reporterEmployeeNumber\": \"345671\",\r\n  \"isPresentlyWorkingInThisCompany\": true\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8084/user/createEmployee",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"user",
+										"createEmployee"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 17:22:29 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"employeeNumber\": \"345672\",\n    \"name\": \"John Doesss\",\n    \"roleName\": \"Data Analyst\",\n    \"departmentName\": \"Logistics Inbound\",\n    \"phone\": \"9876543210\",\n    \"secondaryPhone\": \"0123456789\",\n    \"personalEmail\": \"johndoe@email.com\",\n    \"officialEmail\": \"john.doe@company.com\",\n    \"officialPhoneNumber\": \"022-12345678\",\n    \"isActive\": true,\n    \"address\": \"1234 Street Name, City, State, Country\",\n    \"pincode\": \"123456\",\n    \"warehouseNumber\": \"WH001\",\n    \"joiningDate\": \"2024-11-15T00:00:00.000+00:00\",\n    \"salary\": 60000,\n    \"reporterName\": \"Jane Smith\",\n    \"reporterEmployeeNumber\": \"345671\",\n    \"creationDate\": null,\n    \"isPresentlyWorkingInThisCompany\": true,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"EMPLOYEE_CREATED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Employee",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"employeeNumber\": \"345672\",\r\n  \"name\": \"John Doesss\",\r\n  \"roleName\": \"Data Analyst\",\r\n  \"departmentName\": \"Logistics Inbound\",\r\n  \"phone\": \"9876543210\",\r\n  \"secondaryPhone\": \"0123456789\",\r\n  \"personalEmail\": \"johndoe@email.com\",\r\n  \"officialEmail\": \"john.doe@company.com\",\r\n  \"officialPhoneNumber\": \"022-12345678\",\r\n  \"isActive\": true,\r\n  \"address\": \"1234 Street Name, City, State, Country\",\r\n  \"pincode\": \"123456\",\r\n  \"warehouseNumber\": \"WH001\",\r\n  \"joiningDate\": \"2024-11-15\",\r\n  \"salary\": 73000.00,\r\n  \"reporterName\": \"Jane Smith\",\r\n  \"reporterEmployeeNumber\": \"345671\",\r\n  \"isPresentlyWorkingInThisCompany\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8084/user/updateEmployee",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"user",
+								"updateEmployee"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"employeeNumber\": \"345672\",\r\n  \"name\": \"John Doesss\",\r\n  \"roleName\": \"Data Analyst\",\r\n  \"departmentName\": \"Logistics Inbound\",\r\n  \"phone\": \"9876543210\",\r\n  \"secondaryPhone\": \"0123456789\",\r\n  \"personalEmail\": \"johndoe@email.com\",\r\n  \"officialEmail\": \"john.doe@company.com\",\r\n  \"officialPhoneNumber\": \"022-12345678\",\r\n  \"isActive\": true,\r\n  \"address\": \"1234 Street Name, City, State, Country\",\r\n  \"pincode\": \"123456\",\r\n  \"warehouseNumber\": \"WH001\",\r\n  \"joiningDate\": \"2024-11-15\",\r\n  \"salary\": 73000.00,\r\n  \"reporterName\": \"Jane Smith\",\r\n  \"reporterEmployeeNumber\": \"345671\",\r\n  \"isPresentlyWorkingInThisCompany\": true\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8084/user/updateEmployee",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"user",
+										"updateEmployee"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 17:23:00 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"employeeNumber\": \"345672\",\n    \"name\": \"John Doesss\",\n    \"roleName\": \"Data Analyst\",\n    \"departmentName\": \"Logistics Inbound\",\n    \"phone\": \"9876543210\",\n    \"secondaryPhone\": \"0123456789\",\n    \"personalEmail\": \"johndoe@email.com\",\n    \"officialEmail\": \"john.doe@company.com\",\n    \"officialPhoneNumber\": \"022-12345678\",\n    \"isActive\": true,\n    \"address\": \"1234 Street Name, City, State, Country\",\n    \"pincode\": \"123456\",\n    \"warehouseNumber\": \"WH001\",\n    \"joiningDate\": \"2024-11-15T00:00:00.000+00:00\",\n    \"salary\": 73000,\n    \"reporterName\": \"Jane Smith\",\n    \"reporterEmployeeNumber\": \"345671\",\n    \"creationDate\": null,\n    \"isPresentlyWorkingInThisCompany\": true,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"EMPLOYEE_UPDATED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Employee by Number and Official Email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/user/getEmployeeByNumberOrOfficialEmail?employeeNumber=345672&officialEmail=john.doe@company.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"user",
+								"getEmployeeByNumberOrOfficialEmail"
+							],
+							"query": [
+								{
+									"key": "employeeNumber",
+									"value": "345672"
+								},
+								{
+									"key": "officialEmail",
+									"value": "john.doe@company.com"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8084/user/getEmployeeByNumberOrOfficialEmail?employeeNumber=345672&officialEmail=john.doe@company.com",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"user",
+										"getEmployeeByNumberOrOfficialEmail"
+									],
+									"query": [
+										{
+											"key": "employeeNumber",
+											"value": "345672"
+										},
+										{
+											"key": "officialEmail",
+											"value": "john.doe@company.com"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 17:23:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"employeeNumber\": \"345672\",\n    \"name\": \"John Doesss\",\n    \"roleName\": \"Data Analyst\",\n    \"departmentName\": \"Logistics Inbound\",\n    \"phone\": \"9876543210\",\n    \"secondaryPhone\": \"0123456789\",\n    \"personalEmail\": \"johndoe@email.com\",\n    \"officialEmail\": \"john.doe@company.com\",\n    \"officialPhoneNumber\": \"022-12345678\",\n    \"isActive\": true,\n    \"address\": \"1234 Street Name, City, State, Country\",\n    \"pincode\": \"123456\",\n    \"warehouseNumber\": \"WH001\",\n    \"joiningDate\": \"2024-11-15T00:00:00.000+00:00\",\n    \"salary\": 73000,\n    \"reporterName\": \"Jane Smith\",\n    \"reporterEmployeeNumber\": \"345671\",\n    \"creationDate\": null,\n    \"isPresentlyWorkingInThisCompany\": true,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"EMPLOYEE_FETCHED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Head of warehouse\",\r\n  \"isActive\": true,\r\n  \"isSpecialAccessEnabled\": true,\r\n  \"isAdmin\": false\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8084/user/createRole",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"user",
+								"createRole"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Head of warehouse\",\r\n  \"isActive\": true,\r\n  \"isSpecialAccessEnabled\": true,\r\n  \"isAdmin\": false\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8084/user/createRole",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"user",
+										"createRole"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 17:20:13 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": \"Head of warehouse\",\n    \"isActive\": true,\n    \"isSpecialAccessEnabled\": true,\n    \"isAdmin\": false,\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"ROLE_CREATED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Role",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Head of warehouse\",\r\n  \"isActive\": true,\r\n  \"isSpecialAccessEnabled\": true,\r\n  \"isAdmin\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8084/user/updateRole",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"user",
+								"updateRole"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Head of warehouse\",\r\n  \"isActive\": true,\r\n  \"isSpecialAccessEnabled\": true,\r\n  \"isAdmin\": true\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8084/user/updateRole",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"user",
+										"updateRole"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 17:20:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": \"Head of warehouse\",\n    \"isActive\": true,\n    \"isSpecialAccessEnabled\": true,\n    \"isAdmin\": true,\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"ROLE_UPDATED_SUCCESSFULLY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Role by Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/user/getRoleByName?name=Head of warehouse",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"user",
+								"getRoleByName"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Head of warehouse"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Scenario",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8084/user/getRoleByName?name=Head of warehouse",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"user",
+										"getRoleByName"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Head of warehouse"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 Nov 2024 17:20:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"name\": \"Head of warehouse\",\n    \"isActive\": true,\n    \"isSpecialAccessEnabled\": true,\n    \"isAdmin\": true,\n    \"creationDate\": null,\n    \"lastModifiedDate\": null,\n    \"responseStatus\": \"200\",\n    \"responseMessage\": \"ROLE_FETCHED_SUCCESSFULLY\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
