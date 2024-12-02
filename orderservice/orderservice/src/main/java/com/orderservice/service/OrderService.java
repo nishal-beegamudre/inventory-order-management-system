@@ -380,7 +380,7 @@ public class OrderService {
         CreateOrderResponseDTO orderResponseDTO = new CreateOrderResponseDTO();
         orderResponseDTO.setResponseMessage(Constants.ORDER_CANCELLED_SUCCESSFULLY);
         orderResponseDTO.setResponseStatus("200");
-        orderResponseDTO.setOrderNumber(orderNumber);;
+        orderResponseDTO.setOrderNumber(orderNumber);
         
         kafkaProducer.sendMessage(order.getCustomerEmail(), orderCancellationEmail, 
         		orderNumber, " ");
@@ -654,7 +654,7 @@ public class OrderService {
 			if(finalSelectedWarehouse!=null) {
 			
 				for(String sku: skuToQtyMap.keySet()) {
-					StockDTO stockDTO = new StockDTO(null,null,singleWarehouseNumbers.get(0),
+					StockDTO stockDTO = new StockDTO(null,null,finalSelectedWarehouse,
 									sku,(-1)*Double.valueOf(skuToQtyMap.get(sku).toString())
 									,null,null,null,null);
 					stockListRequestDTO.add(stockDTO);
@@ -665,7 +665,7 @@ public class OrderService {
 				if(responseDTO.getResponseStatus().equals("200")) {
 					logger.info("Entered 200");
 					for(OrderItem orderItem: orderItems) {
-						orderItem.setWarehouseNumber(singleWarehouseNumbers.get(0));
+						orderItem.setWarehouseNumber(finalSelectedWarehouse);
 						orderItem.setLastModifiedDate(ZonedDateTime.now(ZoneId.of(Constants.IST)));
 						orderItem.setStatus(OrderStatusEnum.CREATED);
 					}
